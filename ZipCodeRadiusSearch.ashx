@@ -6,8 +6,6 @@
 
 using System;
 using Microsoft.SharePoint;
-using System.Data;
-using System.Data.SqlClient;
 using System.Text;
 using System.Web;
 using System.Linq;
