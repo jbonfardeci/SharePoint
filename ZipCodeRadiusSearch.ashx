@@ -31,15 +31,15 @@ namespace MySharePointNS
             HttpRequest r = ctx.Request;
 
             string zipCode = !string.IsNullOrEmpty(r["zip"]) 
-                ? (string)ctx.Request["zip"] 
+                ? (string)r["zip"] 
                 : null;
 
             int radius = !string.IsNullOrEmpty(r["radius"]) 
-                ? Convert.ToInt32( ctx.Request["radius"] )
+                ? Convert.ToInt32( r["radius"] )
                 : 100;
                 
             string listName = !string.IsNullOrEmpty(r["listName"]) 
-                ? (string)ctx.Request["listName"]
+                ? (string)r["listName"]
                 : ZIPCODE_LISTNAME;
             
             string json = null;
